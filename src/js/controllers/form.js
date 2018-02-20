@@ -161,7 +161,7 @@ document.querySelector('form button').onclick = function(e) {
         };
 
 
-        var googleSheetUrl = 'https://script.google.com/macros/s/AKfycbxTkn0Q6yzCYo19g7MV7lgbUUNJMwQnuipvYd-6BX6LLQ5XSCrG/exec',
+        var googleSheetUrl = 'link',
             googleData = getFormData();
 
         var xhr2 = new XMLHttpRequest();
