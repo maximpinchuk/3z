@@ -1,0 +1,6 @@
+body {
+    overflow: auto;
+    &.no-scroll {
+        overflow: hidden;
+    }
+}

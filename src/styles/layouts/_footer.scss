@@ -1,0 +1,120 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+
+    .footer-wrapper {
+        padding: 80px 0;
+        background-color: #f3a3bc;
+        @include grid-breakpoint(sm) {
+            padding: 50px 0;
+        }
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+    }
+
+    .footer-logo {
+        width: 55px;
+        margin: 0;
+        font-family: "Muller", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+        color: #ffffff;
+    }
+
+    .footer-info__text {
+        margin: 40px 0 0 0;
+        font-family: "Muller", "Arial", sans-serif;
+        font-weight: 500;
+        font-size: 0.875rem;
+        color: #ffffff;
+        line-height: (24/14);
+        text-align: center;
+    }
+
+    .footer-policy {
+        position: relative;
+        font-family: "Muller", "Arial", sans-serif;
+        font-weight: 500;
+        font-size: 0.875rem;
+        color: #ffffff;
+        line-height: (24/14);
+        text-decoration: none;
+        // outline: none;
+        transition: color 0.3s;
+        &:hover {
+            &:after {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #ffffff;
+            opacity: 0;
+            transform-origin: top;
+            transform: translate3d(0, 3px, 0);
+            transition: transform 0.2s,
+                        opacity 0.2s;
+        }
+    }
+
+    .footer-devs {
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        // outline: none;
+        text-decoration: none;
+        @include grid-breakpoint(sm) {
+            margin-top: 25px;
+        }
+        &:hover {
+            span {
+                &:after {
+                    transform: translate3d(0, 0, 0);
+                    opacity: 1;
+                }
+            }
+        }
+        span {
+            position: relative;
+            margin-right: 25px;
+            font-family: "Muller", "Arial", sans-serif;
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: #ffffff;
+            line-height: (24/14);
+            transition: color 0.3s;
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: 4px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: #ffffff;
+                opacity: 0;
+                transform-origin: top;
+                transform: translate3d(0, 3px, 0);
+                transition: transform 0.2s,
+                            opacity 0.2s;
+            }
+        }
+        img {
+            width: 100px;
+        }
+    }
+}

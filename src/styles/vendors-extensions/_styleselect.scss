@@ -1,0 +1,79 @@
+style.style {
+    display: none;
+    outline: none;
+}
+
+.style-select {
+    width: 100%;
+}
+.style-select:focus {
+    outline: none;
+}
+
+.style-select .ss-selected-option {
+    padding: 2px 0 7px 30px;
+    font-family: "Muller", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: transparent;
+    background-image: none;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+}
+
+.style-select .ss-selected-option::after {
+    display: none;
+}
+
+.style-select .ss-dropdown {
+    top: 0;
+    z-index: 3;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    @media screen and (min-width: 768px) {
+        width: 200%;
+    }
+}
+
+.style-select .ss-dropdown .ss-option {
+    width: 100px;
+    margin: 3px auto;
+    padding: 1px 5px;
+    font-family: "Muller", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: #96c7ee;
+    text-align: center;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    transition: border 0.3s,
+                color 0.3s,
+                background-color 0.3s;
+    @media screen and (min-width: 768px) {
+        width: 40%;
+        float: left;
+        margin: 3px 5%;
+        padding: 1px 5px;
+    }
+}
+
+.style-select .ss-dropdown .ss-option.ticked {
+    color: #ffffff;
+    border: 1px solid #96c7ee;
+    background-color: #96c7ee;
+}
+
+.style-select .ss-dropdown .ss-option.highlighted {
+    color: #96c7ee;
+    border: 1px solid #96c7ee;
+    background-color: transparent;
+}
+
+.style-select .ss-dropdown .ss-option.ticked::before {
+    display: none;
+}

@@ -1,0 +1,18 @@
+.skrollable {
+    position: absolute;
+    z-index: 0;
+    margin: 0;
+    &.skrollable-1 {
+        top: 110vh;
+        left: -160px;
+        @include grid-breakpoint(md) {
+            // top: 50px;
+            top: 110vh;
+            left: -150px;
+        }
+    }
+    .skrollable-image {
+        transform-origin: center;
+        transform: translate3d(0, 0, 0);
+    }
+}

@@ -1,0 +1,15 @@
+.form-response {
+    display: none;
+    margin-top: 30px;
+    font-family: "Muller", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.55;
+
+    &--success {
+        color: #00a002;
+    }
+    &--error {
+        color: #ff3232;
+    }
+}

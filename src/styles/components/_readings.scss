@@ -1,0 +1,74 @@
+.readings-block {
+    margin: 80px 0 50px 0;
+    @include grid-breakpoint(md) {
+        margin: 50px 0;
+    }
+    .readings-block__title {
+        margin-bottom: 35px;
+        font-family: "Muller", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        color: $text-color--dark;
+        line-height: (24/16);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        transition: opacity 0.4s,
+                    transform 0.4s;
+        @include grid-breakpoint(md) {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+    .readings-block__content {
+        @include grid-row();
+    }
+}
+
+.readings-item {
+    box-sizing: border-box;
+    @include grid-col(12 12 12 6);
+    margin: 15px 0;
+    padding: 0 15px;
+    transition: opacity 0.4s,
+                transform 0.4s;
+    @include grid-breakpoint(md) {
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+    }
+    .readings-item__number {
+        font-family: "Muller", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        color: #96c7ee;
+    }
+    .readings-item__text {
+        margin: 10px 0 0 0;
+        font-family: "Muller", "Arial", sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        color: $text-color--dark;
+        line-height: (24/16);
+        mark {
+            color: #f3a3bc;
+            background-color: transparent;
+        }
+    }
+}
+
+
+
+.animated {
+    .readings-item {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.readings-block {
+    &.animated {
+        .readings-block__title {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

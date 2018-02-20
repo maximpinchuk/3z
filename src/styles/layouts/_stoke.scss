@@ -1,0 +1,97 @@
+.section--stoke {
+    position: relative;
+    padding: 90px 0 80px 0;
+    background-image: url("../img/stoke/stoke-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    @include grid-breakpoint(sm) {
+        padding: 140px 0 105px 0;
+    }
+}
+
+.stoke-container {
+    position: relative;
+    z-index: 1;
+}
+
+.stoke-title {
+    margin: 0;
+    font-family: "Muller", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #ffffff;
+    line-height: 1.33;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: opacity 0.4s 0.4s,
+                transform 0.4s 0.4s;
+    @media screen and (min-width: 350px) {
+        font-size: 3.5rem;
+    }
+    @include grid-breakpoint(sm) {
+        font-size: 5rem;
+        line-height: 1;
+    }
+    @include grid-breakpoint(md) {
+        font-size: 6.25rem;
+        opacity: 0;
+        transform: translate3d(0, 60px, 0);
+    }
+}
+
+.stoke-subtitle {
+    margin-top: 30px;
+    @include grid-breakpoint(sm) {
+        max-width: 720px;
+        margin-top: 110px;
+    }
+    .stoke-subtitle-text {
+        margin: 0;
+        font-family: "Muller", "Arial", sans-serif;
+        font-weight: 500;
+        font-size: 1.25rem;
+        color: #ffffff;
+        line-height: 1.33;
+        transition: opacity 0.4s 0.7s,
+                    transform 0.4s 0.7s;
+        @include grid-breakpoint(sm) {
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+        @include grid-breakpoint(md) {
+            font-size: 1.625rem;
+            line-height: 1.2;
+            opacity: 0;
+            transform: translate3d(0, 60px, 0);
+        }
+        mark {
+            font-size: 1.75rem;
+            color: #ffee5b;
+            background-color: transparent;
+            @include grid-breakpoint(sm) {
+                font-size: 2rem;
+            }
+            @include grid-breakpoint(md) {
+                font-size: 2.125rem;
+            }
+        }
+    }
+}
+
+.stoke-form {
+    margin-top: 80px;
+}
+
+.animated {
+    .stoke-title {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    .stoke-subtitle {
+        .stoke-subtitle-text {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

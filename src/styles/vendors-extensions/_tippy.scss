@@ -1,0 +1,18 @@
+.tippy-tooltip.optic-theme {
+    max-width: 440px;
+    padding: 20px 70px 20px 30px;
+    border-radius: 6px;
+}
+
+.tippy-tooltip.optic-theme .tippy-backdrop {
+    background-color: #96c7ee;
+}
+
+.tippy-tooltip.optic-theme .tippy-content {
+    font-family: "Muller", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #ffffff;
+    line-height: (22/14);
+    text-align: left;
+}

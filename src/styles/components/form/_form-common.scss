@@ -1,0 +1,43 @@
+.form {
+    padding: 0 15px;
+    @include grid-breakpoint(sm) {
+        padding: 0;
+    }
+}
+
+.form-row {
+    @include grid-row();
+}
+
+.form-column {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: opacity 0.4s,
+                transform 0.4s;
+    @include grid-breakpoint(sm) {
+        width: 50%;
+        margin-top: 35px;
+        margin-bottom: 35px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    @include grid-breakpoint(md) {
+        width: 360px;
+        opacity: 0;
+        transform: translate3d(0, 60px, 0);
+    }
+    &:nth-child(2) {
+        @include grid-breakpoint(md) {
+            margin-left: 40px;
+        }
+    }
+}
+
+.animated {
+    .form-column {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

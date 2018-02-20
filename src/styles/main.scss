@@ -1,0 +1,60 @@
+/*
+ * 1. Vendors
+ */
+@import "vendors/tippy";
+
+/*
+ * 2. Vendors-extensions
+ */
+@import "vendors-extensions/tippy";
+
+/*
+ * 3. Base
+ */
+@import "base/typography";
+@import "base/normalize";
+
+/*
+ * 4. Utils
+ */
+@import "utils/variables";
+
+/*
+ * 5. Pages
+ */
+@import "pages/home";
+
+/*
+ * 6. Layouts
+ */
+@import "layouts/grid";
+@import "layouts/header";
+@import "layouts/banner";
+@import "layouts/about";
+@import "layouts/open-info";
+@import "layouts/advantages";
+@import "layouts/service";
+@import "layouts/stoke";
+@import "layouts/contacts";
+@import "layouts/footer";
+
+/*
+ * 7. Components
+ */
+@import "components/scrollbar";
+@import "components/layouts";
+@import "components/navigation";
+@import "components/segmenter";
+@import "components/element-wrapper";
+@import "components/image-wrapper";
+@import "components/photo-group";
+@import "components/skrollable";
+@import "components/collapses";
+@import "components/service-type";
+@import "components/readings";
+@import "components/form/form-common";
+@import "components/form/form-group";
+@import "components/form/form-button";
+@import "components/form/form-response-message";
+@import "components/schedule";
+@import "components/socials";

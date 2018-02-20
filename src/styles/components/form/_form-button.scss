@@ -1,0 +1,41 @@
+.form-button {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    margin: 25px 0 0 0;
+    padding: 18px 60px 18px 60px;
+    font-family: "Muller", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 50px;
+    // outline: none;
+    cursor: pointer;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 200%;
+        height: 100%;
+        display: inline-block;
+        background: -moz-linear-gradient(-45deg, rgba(248,185,134,0.8) 0%, rgba(243,163,188,0.8) 100%);
+        background: -webkit-linear-gradient(-45deg, rgba(248,185,134,0.8) 0%,rgba(243,163,188,0.8) 100%);
+        background: linear-gradient(135deg, rgba(248,185,134,0.8) 0%,rgba(243,163,188,0.8) 100%);
+        transform: translate3d(-50%, 0, 0);
+        transition: transform 0.4s ease-in;
+    }
+    &:hover {
+        &:before {
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    &:active {
+        outline: none;
+    }
+}

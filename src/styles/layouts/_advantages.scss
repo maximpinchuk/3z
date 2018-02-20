@@ -1,0 +1,113 @@
+.section--advantages {
+    padding: 100px 0 80px 0;
+    background: #f3a3bc;
+    background: -moz-linear-gradient(-45deg, #f3a3bc 0%, #7db9e8 100%);
+    background: -webkit-linear-gradient(-45deg, #f3a3bc 0%,#7db9e8 100%);
+    background: linear-gradient(135deg, #f3a3bc 0%,#7db9e8 100%);
+    @include grid-breakpoint(sm) {
+        padding: 130px 0 90px 0;
+    }
+}
+
+.advantages-title {
+    margin: 0 0 50px 0;
+    font-family: "Muller", "Arial", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #ffffff;
+    line-height: 1.33;
+    @include grid-breakpoint(sm) {
+        font-size: 2.25rem;
+    }
+    @include grid-breakpoint(md) {
+        max-width: 840px;
+        font-size: 2.625rem;
+        line-height: (56/42);
+        transition: transform 0.4s 0.3s,
+                    opacity 0.4s 0.3s;
+        opacity: 0;
+        transform: translate3d(0, 60px, 0);
+    }
+    button {
+        font-family: "Muller", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #ffffff;
+        line-height: 1.33;
+        text-decoration: underline;
+    }
+    mark {
+        color: #b1dcff;
+        background-color: transparent;
+    }
+}
+
+.advantage-item {
+    box-sizing: border-box;
+    @include grid-col(12 12 6 4);
+    display: flex;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    @include grid-breakpoint(sm) {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    @include grid-breakpoint(md) {
+        transition: transform 0.4s,
+                    opacity 0.4s;
+        transform: translate3d(0, 40px, 0);
+        opacity: 0;
+    }
+    &:nth-child(1) {
+        .advantage-item__number {
+            .advantage-item__number-image {
+                width: 34px;
+            }
+        }
+    }
+    .advantage-item__number {
+        position: relative;
+        .advantage-item__number-image {
+            width: 40px;
+            height: auto;
+        }
+    }
+    .advantage-item__content {
+        margin-left: 15px;
+        .advantage-item__content-text {
+            margin: 0;
+            font-family: "Muller", "Arial", sans-serif;
+            font-weight: 400;
+            font-size: 1rem;
+            color: #ffffff;
+            line-height: (24/16);
+            button {
+                font-family: "Muller", "Arial", sans-serif;
+                font-weight: 400;
+                font-size: 1rem;
+                color: #ffffff;
+                line-height: (24/16);
+                text-decoration: underline;
+                text-align: left;
+                // outline: none;
+                transition: color 0.3s;
+                &:hover {
+                    color: #96c7ee;
+                }
+            }
+        }
+    }
+}
+
+
+
+.animated {
+    .advantages-title {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    .advantage-item {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}

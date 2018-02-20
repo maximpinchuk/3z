@@ -1,0 +1,89 @@
+.service-block__collapses {
+    margin-top: 120px;
+}
+
+.collapse-block {
+    margin: 13px 0;
+    &.collapse-block--opened {
+        .collapse-block__link {
+            .collapse-block__link-icon {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+    .collapse-block__link-wrapper {
+        margin-bottom: 20px;
+        transition: opacity 0.3s,
+                    transform 0.3s,
+                    color 0.3s;
+        @include grid-breakpoint(md) {
+            opacity: 0;
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+    .collapse-block__link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-family: "Muller", "Arial", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        color: $text-color--dark;
+        line-height: (24/16);
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-decoration: none;
+        // outline: none;
+        transition: color 0.3s;
+        &:hover {
+            color: #f3a3bc;
+        }
+        .collapse-block__link-icon {
+            position: relative;
+            display: block;
+            width: 18px;
+            height: 18px;
+            margin-left: 30px;
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                display: block;
+                width: 18px;
+                height: 4px;
+                margin-top: -2px;
+                background-color: #f3a3bc;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 50%;
+                display: block;
+                width: 4px;
+                height: 18px;
+                margin-left: -2px;
+                background-color: #f3a3bc;
+            }
+        }
+    }
+    .collapse-block__content {
+        @include grid-row();
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+}
+
+
+
+.animated {
+    .collapse-block {
+        .collapse-block__link-wrapper {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+}

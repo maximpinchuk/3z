@@ -1,0 +1,142 @@
+.navigation {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    @include grid-breakpoint(sm) {
+        width: auto;
+        text-align: left;
+    }
+    .navigation__item {
+        margin: 20px 0;
+        @include grid-breakpoint(sm) {
+            float: left;
+            margin: 0 11px;
+        }
+        &--tel {
+            margin-top: 50px;
+            @include grid-breakpoint(sm) {
+                margin-top: 0;
+                margin-left: 70px;
+            }
+            @include grid-breakpoint(md) {
+                margin-left: 100px;
+            }
+        }
+        &--button {
+            display: none;
+            @include grid-breakpoint(sm) {
+                margin-left: -70px;
+            }
+            @include grid-breakpoint(md) {
+                margin-left: -50px;
+            }
+        }
+        .navigation__item__link {
+            font-family: "Muller", "Arial", sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: #ffffff;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s;
+            @include grid-breakpoint(sm) {
+                font-size: 0.75rem;
+            }
+            &:hover {
+                color: #f3a3bc;
+            }
+            &--tel {
+                font-size: 1.125rem;
+                color: #f3a3bc;
+                @include grid-breakpoint(sm) {
+                    font-size: 0.875rem;
+                }
+            }
+            &--button {
+                position: relative;
+                z-index: 2;
+                display: inline-block;
+                overflow: hidden;
+                padding: 14px 40px 14px 40px;
+                font-family: "Muller", "Arial", sans-serif;
+                font-weight: 700;
+                font-size: 0.75rem;
+                color: #ffffff;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+                text-decoration: none;
+                border-radius: 60px;
+                // outline: none;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: -1;
+                    width: 200%;
+                    height: 100%;
+                    display: inline-block;
+                    background: #f3a3bc;
+                    background: -moz-linear-gradient(-45deg, #f3a3bc 0%, #7db9e8 60%, #7db9e8 100%);
+                    background: -webkit-linear-gradient(-45deg, #f3a3bc 0%,#7db9e8 60%,#7db9e8 100%);
+                    background: linear-gradient(135deg, #f3a3bc 0%,#7db9e8 60%,#7db9e8 100%);
+                    transform: translate3d(-50%, 0, 0);
+                    transition: transform 0.4s ease-in;
+                }
+                &:hover {
+                    &:before {
+                        transform: translate3d(0, 0, 0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header--fixed {
+    .navigation {
+        display: flex;
+        align-items: center;
+        .navigation__item {
+            &--button {
+                display: list-item;
+            }
+            .navigation__item__link {
+                color: $text-color--dark;
+                &:hover {
+                    color: #f3a3bc;
+                }
+                &--tel {
+                    display: none;
+                }
+                &--button {
+                    color: #ffffff;
+                    &:hover {
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.header-navigation--opened {
+    .navigation {
+        display: block;
+        .navigation__item {
+            &--button {
+                display: none;
+            }
+            .navigation__item__link {
+                color: #ffffff;
+                &--tel {
+                    color: #f3a3bc;
+                    display: block;
+                }
+            }
+        }
+    }
+}
